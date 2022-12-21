@@ -1,0 +1,86 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --vt-c-white: #FBF0F0;
+  --vt-c-white-soft: #DFD3D3;
+  --vt-c-white-mute: #B8B0B0;
+
+  --vt-c-black: #3E4149;
+  --vt-c-black-soft: #444F5A;
+  --vt-c-black-mute: #7C7575;
+
+  --rh-c-light-1: #FFC8C8;
+  --rh-c-light-2: #FF9999;
+
+  --rh-c-important-light: #F23A3A;
+  --rh-c-important-dark: #C9182B;
+
+  --rh-c-agree-light:#E3F3AC;
+  --rh-c-agree-dark:#44C662;
+
+  --rh-c-text-link-light: #F7FD04;
+  --rh-c-text-link-dark: #F98404;
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--vt-c-white);
+  --color-background-soft: var(--vt-c-white-soft);
+  --color-background-mute: var(--vt-c-white-mute);
+
+  --color-border: var(--vt-c-black);
+  --color-border-hover: var(--vt-c-black-soft);
+
+  --color-heading: var(--vt-c-black);
+  --color-text: var(--vt-c-black);
+
+  --color-links: var(--rh-c-text-link-dark);
+
+  --section-gap: 160px;
+
+  --color-input-field-bg: var(--rh-c-light-1);
+
+  --color-btn-bg: var(--rh-c-agree-dark);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--vt-c-black);
+    --color-background-soft: var(--vt-c-black-soft);
+    --color-background-mute: var(--vt-c-black-mute);
+
+    --color-border: var(--vt-c-white);
+    --color-border-hover: var(--vt-c-white-soft);
+
+    --color-heading: var(--vt-c-white);
+    --color-text: var(--vt-c-white);
+
+    --color-links: var(--rh-c-text-link-light);
+
+    --color-input-field-bg: var(--rh-c-light-2);
+
+    --color-btn-bg: var(--rh-c-agree-light);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
